@@ -10,16 +10,9 @@ This program establishes an approach to extract knowledge from structured open-s
 ## Introduction
 Organizations collect safety reporting data across a variety of domains in transportation to help inform analysis to improve safety. Hitherto, data size of the safety report experienced a rapid growth and format of the report became more complex to be analyzed. While various tools are available now for us to deal with big data, a key challenge in utilizing these safety reports is to extract information from text narratives within the dataset. The extracted information can help safety related studies or further downstream analysis. To make the best use of these safety reports, we develop a Natural Language Processing based approach that automatically extract and tag information in safety narratives.
 
-### Files
+## Latent Dirichlet Model
 
-
-**train/** - the training set images
-
-**test/** - the test set images (you must predict the labels of these)
-
-**train.csv** - the training set labels, indicates whether the image has a cactus (has_cactus = 1)
-
-**sample_submission.csv** - a sample submission file in the correct format
+The plot summarizes the key idea behind Latent Dirichlet Allocation model. Parameter $\Alpha$ determine the Dirichlet distribution Dir (\alpha) (The dimension is the number of topics) from which the topic multinomial distribution \(v\): \(p(z_{n}|\theta)\) of each document is sampled from. And for the inner layer, the topic assigned for each word is sampled from the multinomial topic distribution \(v\). Given the topic z for the word, the word is sampled from the multinomial distribution \(\varphi \): \(p(w_{n}|z_{n}\beta)\). But for this multinomial distribution \(\varphi \):\(p(w_{n}|z_{n}\beta)\), it’s sampled from the Dir(\(\beta\)) (The dimension is the number of words). So there are three hierarchies in the sampling model. The parameters for the two Dirichlet parameters \(\alpha \) and \(\beta\) are fixed for all documents. For each document, the vector parameters \(\theta\) for the multinomial distribution \(v\) of topic distribution given each document is sampled from the Dirichlet distribution whose dimension is the total number of topics. For each word, the topic assigned for it is sampled from multinomial distribution \(v\) and the word likelihood is sampled from the Dirichlet parameters whose dimension is the total number of words and parameter is \(\beta\).
 
 ## Notebook Topics
 * **Data Description**
