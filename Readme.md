@@ -20,5 +20,5 @@ In this project, the Service Difficulty Reports (SDR) data contains information 
 * Yearly distribution of the records is stable.  We would like toknow main incident topics happened in recent years, so we focus on data from 2010 to 2019.The records in 2010 to 2018 distributed between 50,000 to 80,000, while the data in 2019 isstill collecting. 
 * This dataset offers enough records for us to analyze. It contains more than500,000 rows and 80 columns. 
 * It contains abundant features like aircraft model,defective parts and incident reports, so that we can analyze it from various aspects. 
-
+![MacDown Screenshot](https://github.com/QiangWANGWQ/Machine_Learning_Project/blob/master/pics/22.jpg)
 we would like to present some business advice to the stakeholders in the aviation industry,so the ideal dataset should not only contain military or unscheduled plane.  While this datasetrecords data related to commercial aircraft which makes our intention possible.By identifying trends of topics in aviation safety reports over the years, our research couldpromote the changes in the aviation industry.  Based on the changes of topics, our goal was toprovide a further analysis of effective improvements and potential risk
